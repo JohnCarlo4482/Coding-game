@@ -1,0 +1,567 @@
+:root {
+    --primary-color: #E23636; /* Iron Man Red */
+    --secondary-color: #4F8FF7; /* Captain America Blue */
+    --background-color: #1A1A1A; /* Dark background */
+    --text-color: #FFFFFF;
+    --border-color: #333333;
+    --accent-color: #7D2AE8; /* Thanos Purple */
+    --success-color: #43A047; /* Green */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+}
+
+.header {
+    background-color: rgba(26, 26, 26, 0.9);
+    box-shadow: 0 2px 4px rgba(226, 54, 54, 0.3);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(226, 54, 54, 0.5);
+}
+
+.bug-icon {
+    color: var(--primary-color);
+}
+
+.welcome {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.score {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px rgba(79, 143, 247, 0.5);
+}
+
+/* Login styles */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.login-box {
+    background-color: rgba(26, 26, 26, 0.95);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(226, 54, 54, 0.2);
+    border: 1px solid var(--primary-color);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box .logo {
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(125, 42, 232, 0.2);
+}
+
+.login-btn {
+    margin-top: 1rem;
+    padding: 0.75rem !important;
+    font-size: 1rem !important;
+}
+
+.form-footer {
+    text-align: center;
+    color: #CCC;
+    font-size: 0.9rem;
+}
+
+.form-footer .link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-footer .link:hover {
+    text-decoration: underline;
+}
+
+.success {
+    color: var(--success-color);
+    background-color: rgba(67, 160, 71, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    border: 1px solid var(--success-color);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Existing styles */
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.game-container {
+    background-color: rgba(26, 26, 26, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(226, 54, 54, 0.2);
+    padding: 2rem;
+    border: 1px solid var(--primary-color);
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 1rem;
+}
+
+.difficulty-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.difficulty-badge[data-difficulty="easy"] {
+    background-color: #43a047;
+    color: white;
+}
+
+.difficulty-badge[data-difficulty="medium"] {
+    background-color: #fb8c00;
+    color: white;
+}
+
+.difficulty-badge[data-difficulty="hard"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.description {
+    margin-bottom: 1.5rem;
+    color: #CCC;
+}
+
+.code-editor {
+    margin-bottom: 1.5rem;
+}
+
+textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 1rem;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    resize: vertical;
+    background-color: #2A2A2A;
+    color: #FFFFFF;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 0 10px rgba(226, 54, 54, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #C42121;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(226, 54, 54, 0.5);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    box-shadow: 0 0 10px rgba(79, 143, 247, 0.3);
+}
+
+.btn-secondary:hover {
+    background-color: #3B7DE2;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(79, 143, 247, 0.5);
+}
+
+.btn-purple {
+    background-color: var(--accent-color);
+    color: white;
+    box-shadow: 0 0 10px rgba(125, 42, 232, 0.3);
+}
+
+.btn-purple:hover {
+    background-color: #6A1ED6;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(125, 42, 232, 0.5);
+}
+
+.hint-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(125, 42, 232, 0.1);
+    border-radius: 4px;
+    border: 1px solid var(--accent-color);
+    color: #CCC;
+}
+
+.answer-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(79, 143, 247, 0.1);
+    border-radius: 4px;
+    border: 1px solid var(--secondary-color);
+    color: #CCC;
+}
+
+.hidden {
+    display: none;
+}
+
+.completion-screen {
+    text-align: center;
+    padding: 3rem;
+    background-color: rgba(26, 26, 26, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(226, 54, 54, 0.2);
+    border: 1px solid var(--primary-color);
+}
+
+.completion-screen h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.completion-screen p {
+    margin-bottom: 2rem;
+    color: #CCC;
+}
+
+.error {
+    color: var(--primary-color);
+    background-color: rgba(226, 54, 54, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    border: 1px solid var(--primary-color);
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+/* Add these styles to your existing CSS */
+
+.social-login {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.divider {
+    text-align: center;
+    position: relative;
+    margin: 1rem 0;
+    color: #666;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.btn-google,
+.btn-facebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-google {
+    background-color: #fff;
+    color: #757575;
+    border: 1px solid #ddd;
+}
+
+.btn-google:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-facebook {
+    background-color: #1877F2;
+    color: white;
+}
+
+.btn-facebook:hover {
+    background-color: #166FE5;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+:root {
+    --primary-color: #E23636;
+    --secondary-color: #4F8FF7;
+    --background-color: #1A1A1A;
+    --text-color: #FFFFFF;
+    --border-color: #333333;
+    --accent-color: #7D2AE8;
+    --success-color: #43A047;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.login-box {
+    background-color: rgba(26, 26, 26, 0.95);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(226, 54, 54, 0.2);
+    border: 1px solid var(--primary-color);
+    width: 100%;
+    max-width: 400px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.bug-icon {
+    color: var(--primary-color);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+}
+
+.btn {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-google {
+    background-color: white;
+    color: #757575;
+    border: 1px solid #ddd;
+}
+
+.btn-facebook {
+    background-color: #1877f2;
+    color: white;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-footer {
+    text-align: center;
+    color: #CCC;
+}
+
+.form-footer .link {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.error {
+    color: var(--primary-color);
+    background-color: rgba(226, 54, 54, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--primary-color);
+}
